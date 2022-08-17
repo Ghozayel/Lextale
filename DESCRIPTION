@@ -2,10 +2,10 @@ Package: Lextale
 Type: Package
 Title: What the Package Does (Title Case)
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
+Author: Ghozayel Elotteebi
+Affiliation: Lecturer @Jubail University College/ PhD student @University of Nottingham
+Maintainer: Ghozayel Elotteebi <ghozayel.elotteebi1@nottingham.ac.uk>
+Description: This package calculates the score for the online LexTALE test.
 License: MIT
 Encoding: UTF-8
 LazyData: true
