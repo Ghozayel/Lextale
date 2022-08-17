@@ -1,0 +1,69 @@
+---
+title: "generating data draft"
+author: "gzyl"
+date: '2022-08-17'
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(tidyverse)
+set.seed(666)
+ppt_ids <- gl(6, 20) 
+ppt_ids
+it_ids <- gl(20, 1)
+it_ids <- rep(it_ids, 6)
+it_ids
+length(ppt_ids)
+length(it_ids)
+logfreq <- round(rexp(20)*5, 2)
+logfreq <- rep(logfreq, 6)
+length(logfreq)
+logfreq
+xdata <- tibble(ppt = ppt_ids, item = it_ids,
+                freq = logfreq)
+xdata$int <- 300
+ppt_ints <- rnorm(6, sd = 40)
+xdata$ppt_ints <- rep(ppt_ints, each = 20)
+xdata
+item_ints <- rnorm(20, sd = 20)
+item_ints <- rep(item_ints, times = 6)
+length(item_ints)
+xdata$item_ints <- item_ints
+xdata$error <- rnorm(120, sd = 20)
+xdata$effect <- (-5)*xdata$freq
+xdata %>% head(4)
+xdata <- mutate(xdata,
+                dur = int + ppt_ints + item_ints +
+                  error + effect)
+xreal <- select(xdata, -(int:effect))
+xreal
+library(lme4)
+library(Matrix)
+xmdl <- lmer(dur ~ freq + (1|ppt) + (1|item),
+             data = xreal, REML = FALSE)
+summary(xmdl)
+fixef(xmdl)
+fixef(xmdl)[2]
+summary(xmdl)$coefficients
+coef(xmdl)
+coef(xmdl)$ppt
+ranef(xmdl)$ppt
+xmdl_bad <- lmer(dur ~ freq + (1|ppt),
+                 data = xreal, REML = FALSE)
+xmdl_slope <- lmer(dur ~ freq + (1 + freq|ppt) + (1|item),
+                   data = xreal, REML = FALSE)
+summary(xmdl_slope)$varcor
+coef(xmdl_slope)$ppt
+xmdl_slope_nocorr <- lmer(dur ~ freq +
+                            (1|ppt) + (1|item) +
+                            (0 + freq|ppt),
+                          data = xreal, REML = FALSE)
+summary(xmdl_slope_nocorr)$varcor
+coef(xmdl_slope_nocorr)$ppt
+
+```
+
