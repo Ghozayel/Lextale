@@ -11,3 +11,7 @@ Encoding: UTF-8
 LazyData: true
 URL: https://github.com/Ghozayel/Lextale
 BugReports: https://github.com/Ghozayel/Lextale/issues
+Suggests: 
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
+RoxygenNote: 7.2.1
