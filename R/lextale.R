@@ -1,4 +1,15 @@
-lextale <- function(lextale) {
+
+
+#' Title
+#'
+#' @param lextale
+#'
+#' @return
+#' @export
+#'
+#' @examples
+lextale <- function(lextale, var) {
+
   #marking correct/incorrect entries (1=correct and 0=incorrect) in a new column called score
   lextale$score <- ifelse(lextale$answer==lextale$correct, 1,0) %>%
     #calculate score based on the marked file
