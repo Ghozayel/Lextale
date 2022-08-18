@@ -1,11 +1,11 @@
 Package: Lextale
 Type: Package
-Title: What the Package Does (Title Case)
+Title: LexTALE % correctav
 Version: 0.1.0
 Author: Ghozayel Elotteebi
 Affiliation: Lecturer @Jubail University College/ PhD student @University of Nottingham
 Maintainer: Ghozayel Elotteebi <ghozayel.elotteebi1@nottingham.ac.uk>
-Description: This package calculates the score for the online LexTALE test.
+Description: This package calculates the scoring for the online LexTALE test using the measure % correctav.
 License: MIT
 Encoding: UTF-8
 LazyData: true
