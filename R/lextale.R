@@ -1,6 +1,6 @@
 #' @title LexTALE % correctAV
 #' @description This package calculates the % correctAV scoring for the English LexTALE-test if administered with the downloads using implementations that do not end with participants' score on the screen, e.g. online surveys
-#' @param var A lextale var must be provided as a numeric data, either 0 or 1, with 60 responses at least for each participant.
+#' @param var A lextale var must be provided as a numeric data, either 0 or 1, with 60 responses at least for each participant, participants must be 10 participants per time.
 #' @export
 #' @examples
 #' lextale(sample(c(0,1), replace = TRUE, 600))
