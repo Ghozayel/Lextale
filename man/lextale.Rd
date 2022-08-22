@@ -13,5 +13,5 @@ lextale(answerVar)
 This package calculates the \% correctAV scoring for the English LexTALE-test if administered with the downloads using implementations that do not end with participants' score on the screen, e.g. online surveys
 }
 \examples{
-lextale(c(0,1,0,0,1,0,1,0,1,0,0,0,1,1,1,0,0,0,1,0,0,1,0,0,1,0,1,0,1,0,0,0,1,1,1,0,0,0,1,0,0,1,0,0,1,0,1,0,1,0,0,0,1,1,1,0,0,0,1,0))
+lextale(sample(c(0,1), replace = TRUE, 600))
 }
