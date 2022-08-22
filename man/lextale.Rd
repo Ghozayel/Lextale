@@ -4,7 +4,7 @@
 \alias{lextale}
 \title{LexTALE \% correctAV}
 \usage{
-lextale(var, n = min(60))
+lextale(answerVar)
 }
 \arguments{
 \item{var}{A lextale var must be provided as a numeric data, either 0 or 1, with 60 responses at least for each participant.}
@@ -13,5 +13,5 @@ lextale(var, n = min(60))
 This package calculates the \% correctAV scoring for the English LexTALE-test if administered with the downloads using implementations that do not end with participants' score on the screen, e.g. online surveys
 }
 \examples{
-lextale(0, n = 60)
+lextale(c(0,1,0,0,1,0,1,0,1,0,0,0,1,1,1,0,0,0,1,0,0,1,0,0,1,0,1,0,1,0,0,0,1,1,1,0,0,0,1,0,0,1,0,0,1,0,1,0,1,0,0,0,1,1,1,0,0,0,1,0))
 }
