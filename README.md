@@ -2,6 +2,7 @@
 # Lextale
 
 <!-- badges: start -->
+[![DOI](https://zenodo.org/badge/525854071.svg)](https://zenodo.org/badge/latestdoi/525854071)
 <!-- badges: end -->
 
 The goal of Lextale is to calculates the % correctAV scoring for the English LexTALE-test if administered with the downloads using implementations that do not end with participants' score on the screen, e.g. online surveys.
