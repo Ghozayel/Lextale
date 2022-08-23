@@ -1,6 +1,6 @@
 Package: Lextale
 Type: Package
-Title: A Package to calculate the % correctAV scoring for % LexTALE-test.
+Title: A Package to calculate the % correctAV scoring for % LexTALE-test
 Version: 0.1.0
 Author: Ghozayel Elotteebi
 Affiliation: Lecturer @Jubail University College/ PhD student @University of Nottingham
@@ -15,7 +15,6 @@ Suggests:
     knitr,
     rmarkdown,
     testthat (>= 3.0.0)
-Config/testthat/edition: 3
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.2.1
 Depends: 
