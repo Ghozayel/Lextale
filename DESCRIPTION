@@ -23,4 +23,5 @@ Depends:
     tidyverse
 VignetteBuilder: knitr
 Imports: 
-    here
+    here,
+    tibble
