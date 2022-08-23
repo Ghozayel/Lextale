@@ -8,6 +8,6 @@ ids <- gl(10, 60) #generate new variable 'ids'
 answer <- sample(c(0,1), replace = TRUE, 600) #generate new variable of binary random answers
 is.numeric(answer)
 lextale <- lextale %>% #combine the generated 2 variables into the lextale data
-  mutate(answer = answer) %>%
-  mutate(ids = ids)
+  dplyr::mutate(answer = answer) %>%
+  dplyr::mutate(ids = ids)
 usethis::use_data(lextale, overwrite = TRUE)
