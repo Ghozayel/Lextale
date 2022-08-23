@@ -22,6 +22,6 @@ This is a basic example which shows you how to solve a common problem:
 
 ``` r
 library(Lextale)
-## basic example code
+lextale(sample(c(0,1), replace = TRUE, 600))
 ```
 
