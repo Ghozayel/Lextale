@@ -4,7 +4,7 @@ Title: A Package to calculate the % correctAV scoring for % LexTALE-test
 Version: 0.1.0
 Author: Ghozayel Elotteebi
 Affiliation: Lecturer @Jubail University College/ PhD student @University of Nottingham
-Maintainer: Ghozayel Elotteebi <ghozayel.elotteebi1@nottingham.ac.uk>
+Maintainer: Ghozayel Elotteebi <gzyl4work@gmail.com>
 Description: This package calculates the % correctAV scoring for the English LexTALE-test if administered with the downloads using implementations that do not end with participants' score on the screen, e.g. online surveys.
 License: MIT + file LICENSE
 Encoding: UTF-8
