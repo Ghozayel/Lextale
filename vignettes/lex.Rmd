@@ -1,8 +1,8 @@
 ---
-title: "lextale"
+title: "lex"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{lextale}
+  %\VignetteIndexEntry{lex}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---

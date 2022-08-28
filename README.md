@@ -7,9 +7,9 @@
 
 The goal of [Lextale package](https://ghozayel.github.io/Lextale/) is to calculates the [%correctAV scoring](https://www.lextale.com/scoring.html) for the English [LexTALE-test](www.lextale.com) if administered using implementations which do not end with participants' score on the screen, e.g. online surveys. For more info about the test, see [Lemhöfer & Broersma, 2012](https://www.lextale.com/pdf/Lemhofer_Broersma_2012.pdf).
 
-## Argument
+## Functions and Arguments
 
-The current argument in the function lextale() in this version must include 600 data points, i.e. of 10 paericipants to run the %correctAV scoring analysis.
+lex() The current argument for the function lex() in this version must include 600 data points, i.e. of 10 paericipants to run the %correctAV scoring analysis.
 
 ## Installation
 
@@ -26,6 +26,6 @@ This is a basic example which shows you how to solve a common problem:
 
 ``` r
 library(Lextale)
-lextale(sample(c(0,1), replace = TRUE, 600))
+lex(sample(c(0,1), replace = TRUE, 600))
 ```
 

@@ -4,9 +4,9 @@
 \name{Lextale-package}
 \alias{Lextale}
 \alias{Lextale-package}
-\title{Lextale: A Package to calculate the % correctAV scoring for % LexTALE-test}
+\title{Lextale: A Package to calculate scoring for LexTALE-test}
 \description{
-This package calculates the % correctAV scoring for the English LexTALE-test if administered with the downloads using implementations that do not end with participants' score on the screen, e.g. online surveys.
+This package calculates the scoring for the English LexTALE-test if administered with the downloads using implementations that do not end with participants' score on the screen, e.g. online surveys.
 }
 \seealso{
 Useful links:
@@ -14,6 +14,10 @@ Useful links:
   \item \url{https://github.com/Ghozayel/Lextale}
   \item Report bugs at \url{https://github.com/Ghozayel/Lextale/issues}
 }
+
+}
+\author{
+\strong{Maintainer}: Ghozayel Elotteebi \email{gzyl4work@gmail.com}
 
 }
 \keyword{internal}

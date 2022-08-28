@@ -1,18 +1,19 @@
-#' @title LexTALE % correctAV
-#' @description This package calculates the % correctAV scoring for the English LexTALE-test if administered with the downloads using implementations that do not end with participants' score on the screen, e.g. online surveys
-#' @param var A lextale var must be provided as a numeric data, either 0 or 1, with 60 responses at least for each participant, participants must be 10 participants per time.
+#' @title calculate lextale score
+#' @description calculate the lextale score
+#' @param answerVar a 0/1 values responses to lextale test
 #' @export
 #' @examples
-#' lextale(sample(c(0,1), replace = TRUE, 600))
+#' lex(sample(c(0,1), replace = TRUE, 600))
+#' @name lex
 
 library(tidyverse)
 library(here)
 
-lextale <- function(answerVar) {
+lex <- function(answerVar) {
   stopifnot("Input must be numeric" = is.numeric(answerVar))
-    if (length(answerVar)!=600){
-      warning("Please make sure that you provided responses for 10 participants, 60 data-ponits/responses for each, a total of 600 rows.")
-    }
+  if (length(answerVar)!=600){
+    warning("Please make sure that you provided responses for 10 participants, 60 data-ponits/responses for each, a total of 600 rows.")
+  }
   data <- readr::read_csv(here('data-raw','lextale-sampleData.csv'))
   ids <- gl(10, 60) #generate 10 ids
   input <- c(answerVar)

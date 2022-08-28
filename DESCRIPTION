@@ -1,11 +1,14 @@
 Package: Lextale
 Type: Package
-Title: A Package to calculate the % correctAV scoring for % LexTALE-test
+Title: A Package to calculate scoring for LexTALE-test
 Version: 0.1.0
-Author: Ghozayel Elotteebi
+Authors@R:
+    person(given = "Ghozayel",
+           family = "Elotteebi",
+           email = "gzyl4work@gmail.com",
+           role = c("aut", "cre"))
 Affiliation: Lecturer @Jubail University College/ PhD student @University of Nottingham
-Maintainer: Ghozayel Elotteebi <gzyl4work@gmail.com>
-Description: This package calculates the % correctAV scoring for the English LexTALE-test if administered with the downloads using implementations that do not end with participants' score on the screen, e.g. online surveys.
+Description: This package calculates the scoring for the English LexTALE-test if administered with the downloads using implementations that do not end with participants' score on the screen, e.g. online surveys.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
@@ -24,3 +27,4 @@ VignetteBuilder: knitr
 Imports: 
     here,
     tibble
+Config/testthat/edition: 3
