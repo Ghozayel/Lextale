@@ -9,7 +9,7 @@ The goal of [Lextale package](https://ghozayel.github.io/Lextale/) is to calcula
 
 ## Functions and Arguments
 
-lex() The current argument for the function lex() in this version must include 600 data points, i.e. of 10 paericipants to run the %correctAV scoring analysis.
+lex() the current argument for this function in this version must include 600 data points, i.e. of 10 paericipants to run the %correctAV scoring analysis.
 
 ## Installation
 
