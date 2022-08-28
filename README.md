@@ -22,10 +22,12 @@ devtools::install_github("Ghozayel/Lextale")
 
 ## Example
 
-This is a basic example which shows you how to solve a common problem:
+This is a basic example which shows you how to calculate lextale scoring for 10 people:
 
 ``` r
 library(Lextale)
 lex(sample(c(0,1), replace = TRUE, 600))
 ```
+## Cite as
 
+Ghozayel Elotteebi. (2022). Lextale R Package: Initial Release (0.1.0). Zenodo. https://doi.org/10.5281/zenodo.7017231
