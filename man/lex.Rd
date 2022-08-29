@@ -3,6 +3,9 @@
 \name{lex}
 \alias{lex}
 \title{calculate lextale score}
+\usage{
+lex(answerVar)
+}
 \arguments{
 \item{answerVar}{a 0/1 values responses to lextale test}
 }
@@ -10,5 +13,5 @@
 calculate the lextale score
 }
 \examples{
-lex(sample(c(0,1), replace = TRUE, 600))
+lex(sample(c(0,1), replace = TRUE, 120))
 }
