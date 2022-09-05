@@ -9,7 +9,10 @@ The goal of [Lextale package](https://ghozayel.github.io/Lextale/) is to calcula
 
 ## Functions and Arguments
 
-lex() the current argument for this function in this version must be a tibble of at least 4 variables; ids, type(word/nonword),correct(0/1) & answer(0/1). Here's a [10 participants template](https://github.com/Ghozayel/Lextale/blob/045f9f80d96fad6c20d4912dfe95118ec9995a9a/data-raw/lextaledata.csv), you can copy and add your answers before running the lex() function.
+``` r
+lex()
+```
+The current argument for this function in this version must be a tibble of at least 4 variables; ids, type(word/nonword),correct(0/1) & answer(0/1). 
 
 ## Installation
 
@@ -22,7 +25,9 @@ devtools::install_github("Ghozayel/Lextale")
 
 ## Example
 
-This is a basic example which shows you how to calculate lextale scoring for 10 people/600 data points:
+This is a [10 participants template](https://github.com/Ghozayel/Lextale/blob/045f9f80d96fad6c20d4912dfe95118ec9995a9a/data-raw/lextaledata.csv), you can copy, add your answers & adjust the length accordingly before running the lex() function. Remember that each participant must have 60 data points/rows, and that 'type' and 'correct' variables are fixed-order. 
+
+This is a basic example which shows you how to use the lex() function with the above data:
 
 ``` r
 Lextale::lex('lextaledata')
