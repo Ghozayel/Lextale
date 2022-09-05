@@ -7,11 +7,8 @@
 lex(answerVar)
 }
 \arguments{
-\item{answerVar}{a 0/1 values responses to lextale test}
+\item{answerVar}{a tibble with ids,type (word/nonword),correct(0/1) and answer(0/1) variables}
 }
 \description{
-calculate the lextale score
-}
-\examples{
-lex(sample(c(0,1), replace = TRUE, 120))
+to calculate lextale score, provided with a tibble of at least four variables
 }
