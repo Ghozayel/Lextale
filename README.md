@@ -9,7 +9,7 @@ The goal of [Lextale package](https://ghozayel.github.io/Lextale/) is to calcula
 
 ## Functions and Arguments
 
-lex() the current argument for this function in this version must include 120 data points, i.e. of 2 paericipants to run the %correctAV scoring analysis.
+lex() the current argument for this function in this version must be a tibble of at least 4 variables; ids, type(word/nonword),correct(0/1) & answer(0/1). 
 
 ## Installation
 
@@ -22,10 +22,10 @@ devtools::install_github("Ghozayel/Lextale")
 
 ## Example
 
-This is a basic example which shows you how to calculate lextale scoring for 2 people:
+This is a basic example which shows you how to calculate lextale scoring for 10 people/600 data points:
 
 ``` r
-Lextale::lex(sample(c(0,1), replace = TRUE, 120))
+Lextale::lex('lextaledata')
 ```
 ## Cite as
 
