@@ -4,10 +4,13 @@
 #' @export
 #' @name lex
 lex <- function(answerVar) {
-  #marking correct/incorrect entries (1=correct and 0=incorrect) in a new column called score
-  answerVar$score <- c(ifelse(answerVar$answer == answerVar$correct, 1,0))
-  print(answerVar)
-  result <- answerVar %>%
+  #importing the package data
+  Data <-
+    Lextale::lextale
+    #marking correct/incorrect entries (1=correct and 0=incorrect) in a new column called score
+  Data$score <- c(ifelse(Data$answerVar == Data$correct, 1,0))
+  print(Data$score)
+  result <- Data %>%
     #calculate number of correct answers per type (word/ non-word) for each participant
     dplyr::group_by(ids,type) %>%
     dplyr::summarise(N.correct=sum(score)) %>%
