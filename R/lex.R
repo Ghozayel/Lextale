@@ -18,7 +18,7 @@ lex <- function(answerVar) {
   print(result1)
   result2 <- result1 %>%
     dplyr::group_by(ids) %>%
-    #averaging the correct results of the two types to get the lextale score
+    #averaging p.correct of the two types to get the lextale score
     dplyr::summarise(p.correctAV = mean(result1$p.correct))
   return(result2)
 }
