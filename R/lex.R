@@ -6,21 +6,20 @@
 lex <- function(answerVar) {
   #importing the package data
   Data <-
-    Lextale::lextale
+    Lextale::lextale %>%
     #marking correct/incorrect entries (1=correct and 0=incorrect) in a new column called score
-  Data$score <- c(ifelse(Data$answerVar == Data$correct, 1,0))
-  print(Data$score)
-  result <- Data %>%
+    dplyr::mutate(score=if_else(answerVar==correct, 1, 0))
+  result1 <- Data %>%
     #calculate number of correct answers per type (word/ non-word) for each participant
     dplyr::group_by(ids,type) %>%
     dplyr::summarise(N.correct=sum(score)) %>%
     #p.correct is the percentage for each type
     dplyr::mutate(p.correct=if_else(type=="word", N.correct/40*100, N.correct/20*100))
-  print(result)
-  result2 <- result %>%
+  print(result1)
+  result2 <- result1 %>%
     dplyr::group_by(ids) %>%
     #averaging the correct results of the two types to get the lextale score
-    dplyr::summarise(p.correctAV = mean(result$p.correct))
+    dplyr::summarise(p.correctAV = mean(result1$p.correct))
   write.csv(here::here('result.csv'), result2)
   return(result2)
 }
