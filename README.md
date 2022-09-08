@@ -12,7 +12,8 @@ The goal of [Lextale package](https://ghozayel.github.io/Lextale/) is to calcula
 ``` r
 lex()
 ```
-The current argument for this function in this version must be a variable of 0/1, of 600 rows, to return scores for 10 participants. 
+The current argument for this function in this version must be a variable of 0/1, of no more than 600 rows, to return scores for 10 participants. 
+Future work will maximise this function capacity to calculate 40 participants in just one lex click!
 
 ## Installation
 
