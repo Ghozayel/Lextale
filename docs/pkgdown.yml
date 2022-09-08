@@ -2,6 +2,6 @@ pandoc: 2.17.1.1
 pkgdown: 2.0.6
 pkgdown_sha: ~
 articles:
-  lextale: lextale.html
-last_built: 2022-08-23T17:23Z
+  lex: lex.html
+last_built: 2022-09-08T21:34Z
 
