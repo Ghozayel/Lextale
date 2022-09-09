@@ -12,8 +12,8 @@ The goal of [Lextale package](https://ghozayel.github.io/Lextale/) is to calcula
 ``` r
 lex()
 ```
-The current argument for this function in this version must be a variable of 0/1, of no more than 600 rows, to return scores for 10 participants. 
-Future work will maximise this function capacity to calculate 40 participants in just one lex click!
+The argument for this function in this version must be a variable of 0/1, of no more than 2400 rows, which means that this function can return scores for 40 participants in one lex-click!
+Future work on the function will be on accepting Yes/No in the argument. It might as well include categorising the scores into three CEF levels.
 
 ## Installation
 
@@ -34,7 +34,7 @@ Lextale::lex(answer)
 ```
 or
 ``` r
-Lextale::lex(sample(c(0/1), replace = TRUE, 600))
+Lextale::lex(sample(c(0/1), replace = TRUE, 2400))
 ```
 
 ## Cite as
