@@ -7,8 +7,8 @@
 lex(answerVar)
 }
 \arguments{
-\item{answerVar}{a tibble with ids,type (word/nonword),correct(0/1) and answer(0/1) variables}
+\item{answerVar}{a binary values (0/1), at least 60 to returns one score}
 }
 \description{
-to calculate lextale score, provided with a tibble of at least four variables
+to calculate lextale score, provided with answer variable (0/1)
 }

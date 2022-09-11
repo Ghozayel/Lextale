@@ -1,9 +1,13 @@
 #' @title calculate lextale score
-#' @description to calculate lextale score, provided with a tibble of at least four variables
-#' @param answerVar a tibble with ids,type (word/nonword),correct(0/1) and answer(0/1) variables
+#' @description to calculate lextale score, provided with answer variable (0/1)
+#' @param answerVar a binary values (0/1), at least 60 to returns one score
 #' @export
 #' @name lex
 lex <- function(answerVar) {
+  stopifnot("Input must be numeric" = is.numeric(answerVar))
+  if (length(answerVar)<60){
+    warning("Please make sure that you provided at least 60 responses/data-ponits/rows.")
+    }
   #importing the package data
   Data <-
     Lextale::lextale %>%
