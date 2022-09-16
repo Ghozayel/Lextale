@@ -48,4 +48,4 @@ Lextale::lex(data)
 
 ## Cite as
 
-Ghozayel Elotteebi. (2022). Lextale R Package: Improved Release (0.0.1). Zenodo. https://doi.org/10.5281/zenodo.7017230
+Ghozayel Elotteebi. (2022). Lextale R Package: Improved Release (v1.1.0). Zenodo. https://doi.org/10.5281/zenodo.7017230
