@@ -1,7 +1,7 @@
 Package: Lextale
 Type: Package
 Title: A Package to calculate scoring for LexTALE-test
-Version: 0.1.0
+Version: 1.1.0
 Authors@R:
     person(given = "Ghozayel",
            family = "Elotteebi",
