@@ -12,8 +12,19 @@ The goal of [Lextale package](https://ghozayel.github.io/Lextale/) is to calcula
 ``` r
 lex()
 ```
-The argument for this function in this version must be a variable of 0/1, of no more than 2400 rows, which means that this function can return scores for 40 participants in one lex-click!
-Future work on the function will be on accepting Yes/No in the argument. It might as well include categorising the scores into three CEF levels.
+The argument for this function in this version must inclue two variables(columns):
+- ID: each ID must have 60 entries, e.g. ID 1987 repeated 60 times. 
+- answer: a variable of 0/1, of no more than 2400 rows. 
+
+Please note both columns names are case-sensitive.
+Using this function can return the scores of up to 40 participants in one lex-click!
+Future work on the function will be on accepting Yes/No in the argument. 
+
+``` r
+CEF()
+```
+This function categorises the lexTALE-scores into three CEF levels.It's not live yet, but coming soon!
+
 
 ## Installation
 
@@ -26,15 +37,13 @@ devtools::install_github("Ghozayel/Lextale", dependencies = TRUE)
 
 ## Example
 
-This is two basic examples which shows you how to use the lex() function with the above data:
+This is one basic example which shows you how to use the lex() function to calculate 10 scores:
 
 ``` r
-answer <- sample(c(0/1), replace = TRUE, 600)
-Lextale::lex(answer)
-```
-or
-``` r
-Lextale::lex(sample(c(0/1), replace = TRUE, 2400))
+answer <- sample(c(0/1), replace = TRUE, 600) #generate 600 random binary responses
+ID <- gl(10, 60) #generate  10 ids
+data <- cbind(ID, answer) #combine the two columns above into one data
+Lextale::lex(data)
 ```
 
 ## Cite as
