@@ -12,7 +12,7 @@ The goal of [Lextale package](https://ghozayel.github.io/Lextale/) is to calcula
 ``` r
 lex()
 ```
-The argument for this function in this version takes a dataframe which must inclue two variables(columns):
+The argument for this function takes a dataframe which must inclue two variables(columns):
 - ID: each ID must have 60 entries, e.g. ID 1987 repeated 60 times, of no more than 40 IDs per time (=2400 rows).
 - answer: a variable of 0/1, of no more than 2400 rows. 
 
