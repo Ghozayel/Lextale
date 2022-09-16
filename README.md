@@ -12,12 +12,23 @@ The goal of [Lextale package](https://ghozayel.github.io/Lextale/) is to calcula
 ``` r
 lex()
 ```
-The argument for this function in this version must be a variable of 0/1, of no more than 2400 rows, which means that this function can return scores for 40 participants in one lex-click!
-Future work on the function will be on accepting Yes/No in the argument. It might as well include categorising the scores into three CEF levels.
+The argument for this function takes a dataframe which must inclue two variables(columns):
+- ID: each ID must have 60 entries, e.g. ID 1987 repeated 60 times, of no more than 40 IDs per time (=2400 rows).
+- answer: a variable of 0/1, of no more than 2400 rows. 
+
+*Please note both columns names are case-sensitive.
+Using this function can return the scores of up to 40 participants in one lex-click!
+Future work on the function will be on accepting *Yes/No* in the argument.* 
+
+``` r
+CEF()
+```
+This function categorises the lexTALE-scores into three CEF levels. *Not yet live, but coming soon!*
+
 
 ## Installation
 
-You can install the development version of Lextale from [GitHub](https://github.com/) with:
+You can install the Lextale package from [GitHub](https://github.com/) with:
 
 ``` r
 # install.packages("devtools")
@@ -26,17 +37,15 @@ devtools::install_github("Ghozayel/Lextale", dependencies = TRUE)
 
 ## Example
 
-This is two basic examples which shows you how to use the lex() function with the above data:
+This is a basic example which shows you how to use the *lex()* function to calculate 10 scores:
 
 ``` r
-answer <- sample(c(0/1), replace = TRUE, 600)
-Lextale::lex(answer)
-```
-or
-``` r
-Lextale::lex(sample(c(0/1), replace = TRUE, 2400))
+answer <- sample(c(0/1), replace = TRUE, 600) #generate 600 random binary responses
+ID <- gl(10, 60) #generate  10 ids
+data <- cbind(ID, answer) #combine the two columns above into one data
+Lextale::lex(data)
 ```
 
 ## Cite as
 
-Ghozayel Elotteebi. (2022). Lextale R Package: Initial Release (0.1.0). Zenodo. https://doi.org/10.5281/zenodo.7017231
+Elotteebi, G. (2022). Lextale R-package: Improved Release (Version 1.1.0)[Computer software]. https://doi.org/10.5281/zenodo.7017230
