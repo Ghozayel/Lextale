@@ -12,13 +12,13 @@ The goal of [Lextale package](https://ghozayel.github.io/Lextale/) is to calcula
 ``` r
 lex()
 ```
-The argument for this function in this version must inclue two variables(columns):
-- ID: each ID must have 60 entries, e.g. ID 1987 repeated 60 times. 
+The argument for this function in this version takes a dataframe which must inclue two variables(columns):
+- ID: each ID must have 60 entries, e.g. ID 1987 repeated 60 times, of no more than 40 IDs per time (=2400 rows).
 - answer: a variable of 0/1, of no more than 2400 rows. 
 
 *Please note both columns names are case-sensitive.
 Using this function can return the scores of up to 40 participants in one lex-click!
-Future work on the function will be on accepting Yes/No in the argument.* 
+Future work on the function will be on accepting *Yes/No* in the argument.* 
 
 ``` r
 CEF()
@@ -28,7 +28,7 @@ This function categorises the lexTALE-scores into three CEF levels. *Not yet liv
 
 ## Installation
 
-You can install the development version of Lextale from [GitHub](https://github.com/) with:
+You can install the Lextale package from [GitHub](https://github.com/) with:
 
 ``` r
 # install.packages("devtools")
@@ -48,4 +48,4 @@ Lextale::lex(data)
 
 ## Cite as
 
-Ghozayel Elotteebi. (2022). Lextale R Package: Initial Release (0.1.0). Zenodo. https://doi.org/10.5281/zenodo.7017231
+Ghozayel Elotteebi. (2022). Lextale R Package: Improved Release (0.0.1). Zenodo. https://doi.org/10.5281/zenodo.7017230
