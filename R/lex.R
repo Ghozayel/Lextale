@@ -4,7 +4,7 @@
 #' @export
 #' @name lex
 lex <- function(answerVar) {
-  stopifnot("Input must be numeric" = is.numeric(answerVar))
+#  stopifnot("Input must be numeric" = is.numeric(answerVar))
   if (length(answerVar)<60){
     warning("Please make sure that you provided at least 60 responses/data-ponits/rows.")
     }
