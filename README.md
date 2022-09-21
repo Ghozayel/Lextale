@@ -18,7 +18,7 @@ The argument for this function takes a dataframe which must inclue two variables
 
 *Please note both columns names are case-sensitive.
 Using this function can return the scores of up to 40 participants in one lex-click!
-Future work on the function will be on accepting *Yes/No* in the argument.* 
+Future work on the function will be on accepting Yes/No in the argument.* 
 
 ``` r
 CEF()
