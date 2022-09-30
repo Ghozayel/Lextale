@@ -5,7 +5,7 @@
 [![DOI](https://zenodo.org/badge/525854071.svg)](https://zenodo.org/badge/latestdoi/525854071)
 <!-- badges: end -->
 
-The goal of [Lextale package](https://ghozayel.github.io/Lextale/) is to calculates the [%correctAV scoring](https://www.lextale.com/scoring.html) for the English [LexTALE-test](www.lextale.com) if administered using implementations which do not end with participants' score on the screen, e.g. online surveys. For more info about the test, see [Lemhöfer & Broersma, 2012](https://www.lextale.com/pdf/Lemhofer_Broersma_2012.pdf).
+The goal of [Lextale package](https://ghozayel.github.io/Lextale/) is to calculates the [%correctAV scoring](https://www.lextale.com/scoring.html) for the English and German versions [LexTALE-test](https://www.lextale.com) if administered using implementations which do not end with participants' score on the screen, e.g. online surveys. For more info about the test, see [Lemhöfer & Broersma, 2012](https://www.lextale.com/pdf/Lemhofer_Broersma_2012.pdf).
 
 ## Functions and Arguments
 
@@ -13,7 +13,7 @@ The goal of [Lextale package](https://ghozayel.github.io/Lextale/) is to calcula
 lex()
 ```
 The argument for this function takes a dataframe which must inclue two variables(columns):
-- ID: each ID must have 60 entries, e.g. ID 1987 repeated 60 times, of no more than 40 IDs per time (=2400 rows).
+- ID: each ID must have 60 entries, e.g. ID 1987 repeated 60 times, with up to 40 IDs per time (=2400 rows).
 - answer: a variable of 0/1, of no more than 2400 rows. 
 
 *Please note both columns names are case-sensitive.
