@@ -2,6 +2,6 @@
 library(tidyverse)
 
 lextaledata <- read.csv(here::here('data-raw', 'lextaledata.csv')) # Read in csv file
-lextaledata$answer <- sample(c(0,1), replace = TRUE, 600) #generate new variable of binary random answers
+lextaledata$answer <- sample(c(0,1), replace = TRUE, 2400) #generate new variable of binary random answers
 is.numeric(lextaledata$answer)
 usethis::use_data(lextaledata, overwrite = TRUE)
