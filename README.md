@@ -5,7 +5,7 @@
 [![DOI](https://zenodo.org/badge/525854071.svg)](https://zenodo.org/badge/latestdoi/525854071)
 <!-- badges: end -->
 
-The goal of [Lextale package](https://ghozayel.github.io/Lextale/) is to calculates the [%correctAV scoring](https://www.lextale.com/scoring.html) for the English and German versions [LexTALE-test](https://www.lextale.com) if administered using implementations which do not end with participants' score on the screen, e.g. online surveys. For more info about the test, see [Lemhöfer & Broersma, 2012](https://www.lextale.com/pdf/Lemhofer_Broersma_2012.pdf).
+The goal of [Lextale package](https://ghozayel.github.io/Lextale/) is to calculates the [%correctAV scoring](https://www.lextale.com/scoring.html) for the English and German versions [LexTALE-test](https://www.lextale.com) if administered using implementations that do not end with participants' score on the screen, e.g. online surveys. For more info about the test, see [Lemhöfer & Broersma, 2012](https://www.lextale.com/pdf/Lemhofer_Broersma_2012.pdf).
 
 ## Functions and Arguments
 
@@ -40,9 +40,11 @@ devtools::install_github("Ghozayel/Lextale", dependencies = TRUE)
 This is a basic example which shows you how to use the *lex()* function to calculate 10 scores:
 
 ``` r
+#The first 3 lines below generate fake data for the purpose of testing the lex() function:
 answer <- sample(c(0/1), replace = TRUE, 600) #generate 600 random binary responses
 ID <- gl(10, 60) #generate  10 ids
 data <- cbind(ID, answer) #combine the two columns above into one data
+#The following line run the lextale test:
 Lextale::lex(data)
 ```
 
