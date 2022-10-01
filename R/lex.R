@@ -10,7 +10,7 @@ lex <- function(answerVar) {
 #    }
   #importing the package data
   Data <-
-    Lextale::lextale %>%
+    Lextale::lextaledata %>%
     #marking correct/incorrect entries (1=correct and 0=incorrect) in a new column called score
     dplyr::mutate(score=if_else(answerVar$answer==correct, 1, 0),
                   ID = answerVar$ID)
