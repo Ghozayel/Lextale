@@ -25,6 +25,6 @@ lex <- function(answerVar) {
     dplyr::group_by(ID) %>%
     #averaging p.correct of the two types to get the lextale score
     dplyr::summarise(p.correctAV=mean(p.correct)) %>%
-    dplyr::write.csv(here::here(file = 'score.lex.csv'))
+    utils::write.csv(here::here(file = 'score.lex.csv'))
   return(p.correctAV)
 }
