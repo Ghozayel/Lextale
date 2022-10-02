@@ -55,4 +55,4 @@ Lextale::lex(data)
 
 ## Cite as
 
-Elotteebi, G. (2022). Lextale R-package: Improved Release (Version 2.0.0)[Computer software]. https://doi.org/10.5281/zenodo.7017230
+Elotteebi, G. (2022). Lextale R-package: A package to calculates %correctAV of the LexTALE test (Version 2.0.0) [Computer software]. https://doi.org/10.5281/zenodo.7017230
