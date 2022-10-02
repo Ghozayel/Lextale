@@ -25,6 +25,8 @@ Depends:
     tidyverse
 VignetteBuilder: knitr
 Imports: 
+    dplyr,
     here,
+    readr,
     tibble
 Config/testthat/edition: 3
