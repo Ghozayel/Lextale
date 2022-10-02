@@ -20,12 +20,11 @@ lex <- function(answerVar) {
     dplyr::summarise(N.correct=sum(score)) %>%
     #p.correct is the percentage for each type
     dplyr::mutate(p.correct=if_else(type=="word", N.correct/40*100, N.correct/20*100))
-  print(accuracyByType)
   p.correctAV <-
     accuracyByType %>%
     dplyr::group_by(ID) %>%
     #averaging p.correct of the two types to get the lextale score
-    dplyr::summarise(p.correctAV=mean(p.correct))
-  write.csv(here::here(p.correctAV, 'lex.score.csv'))
+    dplyr::summarise(p.correctAV=mean(p.correct)) %>%
+    view()
   return(p.correctAV)
 }
