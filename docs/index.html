@@ -79,23 +79,26 @@
 </h1></div>
 <!-- badges: start -->
 
-<p>The goal of <a href="https://ghozayel.github.io/Lextale/" class="external-link">Lextale package</a> is to calculates the <a href="https://www.lextale.com/scoring.html" class="external-link">%correctAV scoring</a> for the English and German versions <a href="https://www.lextale.com" class="external-link">LexTALE-test</a> if administered using implementations that do not end with participants’ score on the screen, e.g. online surveys. For more info about the test, see <a href="https://www.lextale.com/pdf/Lemhofer_Broersma_2012.pdf" class="external-link">Lemhöfer &amp; Broersma, 2012</a>.</p>
+<p>The goal of <a href="https://ghozayel.github.io/Lextale/" class="external-link">Lextale package</a> is to mark and calculates the <a href="https://www.lextale.com/scoring.html" class="external-link">%correctAV scoring</a> for the English, German and Dutch versions <a href="https://www.lextale.com" class="external-link">LexTALE-test</a> if administered using implementations that do not end with participants’ score on the screen, e.g. online surveys. For more info about the test, see <a href="https://www.lextale.com/pdf/Lemhofer_Broersma_2012.pdf" class="external-link">Lemhöfer &amp; Broersma, 2012</a>.</p>
 <div class="section level2">
 <h2 id="functions-and-arguments">Functions and Arguments<a class="anchor" aria-label="anchor" href="#functions-and-arguments"></a>
 </h2>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="reference/lex.html">lex</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
-<p>The argument for this function takes a dataframe which must inclue two variables(columns): - ID: each ID must have 60 entries, e.g. ID <em>1987</em> repeated 60 times, with up to 10 IDs per time (=600 rows). - answer: a variable of 0/1, of no more than 600 rows.</p>
-<p><em>Please note both columns names are case-sensitive. Using this function can return the scores of up to 10 participants in one lex-click! Future work on the function will be on accepting Yes/No in the argument.</em></p>
+<p>This function mark and calculates the lextale score for the English and German versions of the test. Its argument takes a dataframe which must inclue two variables(columns): - ID: each ID must have 60 entries, e.g. ID <em>1987</em> repeated 60 times, with 40 IDs per time (=2400 rows). - answer: a variable of 0/1, with 2400 rows.</p>
+<p><em>Please note both columns names are case-sensitive. Using this function returns the scores of 40 participants in one lex-click! Future work will be on accepting and open number of scores, and on accepting Yes/No in the argument.</em></p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu">lex.dutch</span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+<p>This function mark and calculates the lextale score for the Dutch version of the test. <em>Not yet live, but coming soon!</em></p>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu">CEF</span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
-<p>This function categorises the lexTALE-scores into three CEF levels. <em>Not yet live, but coming soon!</em></p>
+<p>This function categorises the English lexTALE-scores into three CEF levels. <em>Not yet live, but coming soon!</em></p>
 </div>
 <div class="section level2">
 <h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
 </h2>
 <p>You can install the Lextale package from <a href="https://github.com/" class="external-link">GitHub</a> with:</p>
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># install.packages("devtools")</span></span>
 <span><span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"Ghozayel/Lextale"</span>, dependencies <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code></pre></div>
 </div>
@@ -103,10 +106,10 @@
 <h2 id="example">Example<a class="anchor" aria-label="anchor" href="#example"></a>
 </h2>
 <p>This is a basic example which shows you how to use the <em>lex()</em> function to calculate 10 scores:</p>
-<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">#The first 3 lines below generate fake data for the purpose of testing the lex() function:</span></span>
-<span><span class="va">answer</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/sample.html" class="external-link">sample</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0</span><span class="op">/</span><span class="fl">1</span><span class="op">)</span>, replace <span class="op">=</span> <span class="cn">TRUE</span>, <span class="fl">600</span><span class="op">)</span> <span class="co">#generate 600 random binary responses</span></span>
-<span><span class="va">ID</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/gl.html" class="external-link">gl</a></span><span class="op">(</span><span class="fl">10</span>, <span class="fl">60</span><span class="op">)</span> <span class="co">#generate  10 ids</span></span>
+<span><span class="va">answer</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/sample.html" class="external-link">sample</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0</span><span class="op">/</span><span class="fl">1</span><span class="op">)</span>, replace <span class="op">=</span> <span class="cn">TRUE</span>, <span class="fl">2400</span><span class="op">)</span> <span class="co">#generate 600 random binary responses</span></span>
+<span><span class="va">ID</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/gl.html" class="external-link">gl</a></span><span class="op">(</span><span class="fl">40</span>, <span class="fl">60</span><span class="op">)</span> <span class="co">#generate  10 ids</span></span>
 <span><span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/cbind.html" class="external-link">cbind</a></span><span class="op">(</span><span class="va">ID</span>, <span class="va">answer</span><span class="op">)</span> <span class="co">#combine the two columns above into one data</span></span>
 <span><span class="co">#The following line run the lextale test:</span></span>
 <span><span class="fu">Lextale</span><span class="fu">::</span><span class="fu"><a href="reference/lex.html">lex</a></span><span class="op">(</span><span class="va">data</span><span class="op">)</span></span></code></pre></div>
@@ -114,7 +117,7 @@
 <div class="section level2">
 <h2 id="cite-as">Cite as<a class="anchor" aria-label="anchor" href="#cite-as"></a>
 </h2>
-<p>Elotteebi, G. (2022). Lextale R-package: Improved Release (Version 1.1.0)[Computer software]. <a href="https://doi.org/10.5281/zenodo.7017230" class="external-link uri">https://doi.org/10.5281/zenodo.7017230</a></p>
+<p>Elotteebi, G. (2022). Lextale R-package: A package to calculates %correctAV of the LexTALE test (Version 2.0.0) [Computer software]. <a href="https://doi.org/10.5281/zenodo.7017230" class="external-link uri">https://doi.org/10.5281/zenodo.7017230</a></p>
 </div>
 </div>
   </div>
