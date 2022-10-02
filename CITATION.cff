@@ -4,9 +4,9 @@ authors:
   - family-names: "Elotteebi"
     given-names: "Ghozayel"
     orcid: "https://orcid.org/0000-0001-7855-0465"
-title: "Lextale R-package: A package which includes one function to calculates %correctAV of the LexTALE test (Initial Release)"
-version: 0.1.0
+title: "Lextale R-package: A package to calculates %correctAV of the LexTALE test"
+version: 2.0.0
 date-released: 2022-08-23
-doi: 10.5281/zenodo.7017231
-url: "https://doi.org/10.5281/zenodo.7017231"
+doi: 10.5281/zenodo.7017230
+url: "https://doi.org/10.5281/zenodo.7017230"
     
