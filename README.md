@@ -49,8 +49,8 @@ This is a basic example which shows you how to use the *lex()* function to calcu
 
 ``` r
 #The first 3 lines below generate fake data for the purpose of testing the lex() function:
-answer <- sample(c(0/1), replace = TRUE, 2400) #generate 600 random binary responses
-ID <- gl(40, 60) #generate  10 ids
+answer <- sample(c(0/1), replace = TRUE, 2400) #generate 2400 random binary responses
+ID <- gl(40, 60) #generate  40 ids
 data <- cbind(ID, answer) #combine the two columns above into one data
 #The following line run the lextale test:
 Lextale::lex(data)
