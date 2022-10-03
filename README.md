@@ -1,5 +1,8 @@
 
-# Lextale
+# Lextale <a href='https://fgazzelloni.github.io/oregonfrogs/'><img src='https://user-images.githubusercontent.com/53487593/193571550-1435e3ab-984d-4471-96f2-e8550a8a48c9.png' align="right" width="25%" min-width="120px" /></a>
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
 
 <!-- badges: start -->
 [![DOI](https://zenodo.org/badge/525854071.svg)](https://zenodo.org/badge/latestdoi/525854071)
