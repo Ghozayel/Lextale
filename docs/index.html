@@ -50,6 +50,9 @@
   </a>
   <ul class="dropdown-menu" role="menu">
 <li>
+      <a href="articles/cef.html">cef</a>
+    </li>
+    <li>
       <a href="articles/lex.html">lex</a>
     </li>
   </ul>
@@ -75,8 +78,10 @@
       </header><div class="row">
   <div class="contents col-md-9">
 <div class="section level1">
-<div class="page-header"><h1 id="lextale">Lextale<a class="anchor" aria-label="anchor" href="#lextale"></a>
+<div class="page-header"><h1 id="lextale-">Lextale <a href="https://fgazzelloni.github.io/oregonfrogs/" class="external-link"><img src="https://user-images.githubusercontent.com/53487593/193571550-1435e3ab-984d-4471-96f2-e8550a8a48c9.png" align="right" width="25%" min-width="120px"></a>
+<a class="anchor" aria-label="anchor" href="#lextale-"></a>
 </h1></div>
+<!-- README.md is generated from README.Rmd. Please edit that file -->
 <!-- badges: start -->
 
 <p>The goal of <a href="https://ghozayel.github.io/Lextale/" class="external-link">Lextale package</a> is to mark and calculates the <a href="https://www.lextale.com/scoring.html" class="external-link">%correctAV scoring</a> for the English, German and Dutch versions <a href="https://www.lextale.com" class="external-link">LexTALE-test</a> if administered using implementations that do not end with participants’ score on the screen, e.g. online surveys. For more info about the test, see <a href="https://www.lextale.com/pdf/Lemhofer_Broersma_2012.pdf" class="external-link">Lemhöfer &amp; Broersma, 2012</a>.</p>
@@ -108,8 +113,8 @@
 <p>This is a basic example which shows you how to use the <em>lex()</em> function to calculate 10 scores:</p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">#The first 3 lines below generate fake data for the purpose of testing the lex() function:</span></span>
-<span><span class="va">answer</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/sample.html" class="external-link">sample</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0</span><span class="op">/</span><span class="fl">1</span><span class="op">)</span>, replace <span class="op">=</span> <span class="cn">TRUE</span>, <span class="fl">2400</span><span class="op">)</span> <span class="co">#generate 600 random binary responses</span></span>
-<span><span class="va">ID</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/gl.html" class="external-link">gl</a></span><span class="op">(</span><span class="fl">40</span>, <span class="fl">60</span><span class="op">)</span> <span class="co">#generate  10 ids</span></span>
+<span><span class="va">answer</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/sample.html" class="external-link">sample</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0</span><span class="op">/</span><span class="fl">1</span><span class="op">)</span>, replace <span class="op">=</span> <span class="cn">TRUE</span>, <span class="fl">2400</span><span class="op">)</span> <span class="co">#generate 2400 random binary responses</span></span>
+<span><span class="va">ID</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/gl.html" class="external-link">gl</a></span><span class="op">(</span><span class="fl">40</span>, <span class="fl">60</span><span class="op">)</span> <span class="co">#generate  40 ids</span></span>
 <span><span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/cbind.html" class="external-link">cbind</a></span><span class="op">(</span><span class="va">ID</span>, <span class="va">answer</span><span class="op">)</span> <span class="co">#combine the two columns above into one data</span></span>
 <span><span class="co">#The following line run the lextale test:</span></span>
 <span><span class="fu">Lextale</span><span class="fu">::</span><span class="fu"><a href="reference/lex.html">lex</a></span><span class="op">(</span><span class="va">data</span><span class="op">)</span></span></code></pre></div>

@@ -2,6 +2,7 @@ pandoc: 2.17.1.1
 pkgdown: 2.0.6
 pkgdown_sha: ~
 articles:
+  cef: cef.html
   lex: lex.html
-last_built: 2022-10-02T20:21Z
+last_built: 2022-10-08T13:24Z
 
