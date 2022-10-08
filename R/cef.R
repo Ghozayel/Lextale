@@ -1,3 +1,8 @@
+#' @title categorize lextale score
+#' @description to categorize lextale score, provided with scores out of 100
+#' @param score a numeric value (0-100)
+#' @export
+#'@name cef
 cef <- function(score) {
   score2cef <-
     score %>%
