@@ -29,9 +29,9 @@ lex.dutch()
 This function mark and calculates the lextale score for the Dutch version of the test. *Not yet live, but coming soon!*
 
 ``` r
-CEF()
+CEF() #under progress
 ```
-This function categorises the English lexTALE-scores into three CEF levels. *Not yet live, but coming soon!*
+This function categorises the English lexTALE-scores into three CEF levels. the categorisation is based on [Lemhöfer & Broersma, 2012 study](https://www.lextale.com/pdf/Lemhofer_Broersma_2012.pdf). cef() argument takes a dataframe which must inclue *score* variable(column) of values from 0-100. The function creates two new columns, CEF.level & CEF.descr. based on the provided scores
 
 
 ## Installation
