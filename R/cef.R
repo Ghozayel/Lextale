@@ -14,6 +14,7 @@ cef <- function(score) {
     dplyr::mutate(CEF.desc =
                     ifelse(score>=80, "Advanced/Proficient",
                          ifelse(score<60, "Lower-intermediate & lower",
-                                "Upper-intermediate")))
-  return(score2cef)
+                                "Upper-intermediate"))) %>%
+    view() %>%
+    utils::write.csv(here::here(file = 'score2cef.csv'))
 }
