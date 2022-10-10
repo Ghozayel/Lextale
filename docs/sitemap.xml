@@ -13,6 +13,9 @@
     <loc>/articles/lex.html</loc>
   </url>
   <url>
+    <loc>/articles/lex_dutch.html</loc>
+  </url>
+  <url>
     <loc>/authors.html</loc>
   </url>
   <url>
@@ -41,5 +44,8 @@
   </url>
   <url>
     <loc>/reference/lextale.html</loc>
+  </url>
+  <url>
+    <loc>/reference/lex_dutch.html</loc>
   </url>
 </urlset>
