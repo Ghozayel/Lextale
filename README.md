@@ -13,7 +13,7 @@ The goal of [Lextale package](https://ghozayel.github.io/Lextale/) is to mark an
 ## Functions and Arguments
 
 ``` r
-lex()
+lex(dataframe)
 ```
 This function mark and calculates the lextale score for the English and German versions of the test. Its argument takes a dataframe which must inclue two variables(columns):
 - ID: each ID must have 60 entries, e.g. ID *1987* repeated 60 times, with 40 IDs per time (=2400 rows).
@@ -24,9 +24,15 @@ Using this function returns the scores of 40 participants in one lex-click!
 Future work will be on accepting and open number of scores, and on accepting Yes/No in the argument.* 
 
 ``` r
-lex.dutch()
+lex.dutch(ID, answer) #under progress
 ```
-This function mark and calculates the lextale score for the Dutch version of the test. *Not yet live, but coming soon!*
+This function mark and calculates the lextale score for the Dutch version of the test. This function takes two arguments, two vectors:
+- ID: each ID must have 60 entries, e.g. ID *1987* repeated 60 times, with 40 IDs per time (=2400 rows).
+- answer: a variable of 0/1, with 2400 rows. 
+
+*Please note both columns names are case-sensitive.
+Using this function returns the scores of 40 participants!
+Future work will be on accepting and open number of scores, and on accepting Yes/No in the argument.* 
 
 ``` r
 CEF() #under progress
