@@ -1,0 +1,19 @@
+---
+title: "lex_dutch"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{lex_dutch}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(Lextale)
+```

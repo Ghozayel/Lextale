@@ -4,7 +4,7 @@
 \name{Lextale-package}
 \alias{Lextale}
 \alias{Lextale-package}
-\title{Lextale: A Package to calculate scoring for LexTALE-test}
+\title{Lextale: A Package to calculate scoring for LexTALE-test, English, German and Dutch versions.}
 \description{
 This package calculates the scoring for the English LexTALE-test if administered with the downloads using implementations that do not end with participants' score on the screen, e.g. online surveys.
 }

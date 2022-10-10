@@ -2,3 +2,4 @@
 
 export(cef)
 export(lex)
+export(lex_dutch)
