@@ -54,7 +54,7 @@ devtools::install_github("Ghozayel/Lextale", dependencies = TRUE)
 ```
 
 ## Examples
-The first 3 lines below below generate fake data for the purpose of testing the functions:
+The first 3 lines below generate fake data for the purpose of testing the functions:
 ``` r
 answer <- sample(c(0/1), replace = TRUE, 2400) #generate 2400 random binary responses
 ID <- gl(40, 60) #generate  40 ids
