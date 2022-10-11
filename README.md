@@ -37,7 +37,7 @@ Future work will be on accepting and open number of scores, and on accepting Yes
 ``` r
 CEF() #under progress
 ```
-This function categorises the English lexTALE-scores into three CEF levels. The categorisation is based on [Lemhöfer & Broersma, 2012 study](https://www.lextale.com/pdf/Lemhofer_Broersma_2012.pdf). cef() argument takes a dataframe which must inclue *score* variable(column) of values from 0 to 100. The function creates two new columns, CEF.level & CEF.descr. based on the provided scores
+This function categorises the English lexTALE-scores into three CEF levels. The categorisation is based on [Lemhöfer & Broersma, 2012 study](https://www.lextale.com/pdf/Lemhofer_Broersma_2012.pdf). cef() argument takes a vector *score* (variable/column) of values from 0 to 100. The function creates two new columns, CEF.level & CEF.descr. based on the provided scores
 
 
 ## Installation
