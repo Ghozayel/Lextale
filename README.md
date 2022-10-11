@@ -61,7 +61,7 @@ data <- cbind(ID, answer) #combine the two columns above into one data
 #The following line calculates the score for the English and German versions of lextale-test:
 Lextale::lex(data)
 #The following line calculates the score for the lextale Dutch test:
-Lextale::lex_dutch(data$ID, data$answer)
+Lextale::lex_dutch(data)
 ```
 
 ## Cite as
