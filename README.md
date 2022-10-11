@@ -19,6 +19,7 @@ This function mark and calculates the lextale score for the English and German v
 - ID: each ID must have 60 entries, e.g. ID *1987* repeated 60 times, with 40 IDs per time (=2400 rows).
 - answer: a variable of 0/1, with 2400 rows. 
 
+Running this function exports/saves a file named 'lex.scores.csv' to your directory.
 *Please note both columns names are case-sensitive.
 Using this function returns the scores of 40 participants in one lex-click!
 Future work will be on accepting and open number of scores, and on accepting Yes/No in the argument.* 
@@ -30,6 +31,7 @@ This function mark and calculates the lextale score for the Dutch version of the
 - ID: each ID must have 60 entries, e.g. ID *1987* repeated 60 times, with 40 IDs per time (=2400 rows).
 - answer: a variable of 0/1, with 2400 rows. 
 
+Running this function exports/saves a file named 'lex_dutch.scores.csv' to your directory.
 *Please note both columns names are case-sensitive.
 Using this function returns the scores of 40 participants!
 Future work will be on accepting and open number of scores, and on accepting Yes/No in the argument.* 
@@ -37,7 +39,9 @@ Future work will be on accepting and open number of scores, and on accepting Yes
 ``` r
 CEF() #under progress
 ```
-This function categorises the English lexTALE-scores into three CEF levels. The categorisation is based on [Lemhöfer & Broersma, 2012 study](https://www.lextale.com/pdf/Lemhofer_Broersma_2012.pdf). cef() argument takes a vector *score* (variable/column) of values from 0 to 100. The function creates two new columns, CEF.level & CEF.descr. based on the provided scores
+This function categorises the English lexTALE-scores into three CEF levels. The categorisation is based on [Lemhöfer & Broersma, 2012 study](https://www.lextale.com/pdf/Lemhofer_Broersma_2012.pdf). cef() argument takes a vector *score* (variable/column) of values from 0 to 100. The function creates two new columns, CEF.level & CEF.descr. based on the provided scores.
+
+Running this function exports/saves a file named 'score2cef.csv' to your directory.
 
 
 ## Installation
