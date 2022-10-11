@@ -24,9 +24,9 @@ Using this function returns the scores of 40 participants in one lex-click!
 Future work will be on accepting and open number of scores, and on accepting Yes/No in the argument.* 
 
 ``` r
-lex.dutch(ID, answer) #under progress
+lex.dutch(dataframe) #under progress
 ```
-This function mark and calculates the lextale score for the Dutch version of the test. This function takes two arguments, two vectors:
+This function mark and calculates the lextale score for the Dutch version of the test. This function takes a dataframe which must inclue two vectors:
 - ID: each ID must have 60 entries, e.g. ID *1987* repeated 60 times, with 40 IDs per time (=2400 rows).
 - answer: a variable of 0/1, with 2400 rows. 
 
