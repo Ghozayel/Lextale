@@ -49,7 +49,7 @@ You can install the Lextale package from [GitHub](https://github.com/) with:
 devtools::install_github("Ghozayel/Lextale", dependencies = TRUE)
 ```
 
-## Example
+## Examples
 
 This is a basic example which shows you how to use the *lex()* and (lex_dutch) functions to calculate 40 scores:
 
