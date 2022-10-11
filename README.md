@@ -24,9 +24,9 @@ Using this function returns the scores of 40 participants in one lex-click!
 Future work will be on accepting and open number of scores, and on accepting Yes/No in the argument.* 
 
 ``` r
-lex.dutch(ID, answer) #under progress
+lex.dutch(dataframe) #under progress
 ```
-This function mark and calculates the lextale score for the Dutch version of the test. This function takes two arguments, two vectors:
+This function mark and calculates the lextale score for the Dutch version of the test. This function takes a dataframe which must inclue two vectors:
 - ID: each ID must have 60 entries, e.g. ID *1987* repeated 60 times, with 40 IDs per time (=2400 rows).
 - answer: a variable of 0/1, with 2400 rows. 
 
@@ -37,7 +37,7 @@ Future work will be on accepting and open number of scores, and on accepting Yes
 ``` r
 CEF() #under progress
 ```
-This function categorises the English lexTALE-scores into three CEF levels. The categorisation is based on [Lemhöfer & Broersma, 2012 study](https://www.lextale.com/pdf/Lemhofer_Broersma_2012.pdf). cef() argument takes a dataframe which must inclue *score* variable(column) of values from 0 to 100. The function creates two new columns, CEF.level & CEF.descr. based on the provided scores
+This function categorises the English lexTALE-scores into three CEF levels. The categorisation is based on [Lemhöfer & Broersma, 2012 study](https://www.lextale.com/pdf/Lemhofer_Broersma_2012.pdf). cef() argument takes a vector *score* (variable/column) of values from 0 to 100. The function creates two new columns, CEF.level & CEF.descr. based on the provided scores
 
 
 ## Installation
@@ -49,7 +49,7 @@ You can install the Lextale package from [GitHub](https://github.com/) with:
 devtools::install_github("Ghozayel/Lextale", dependencies = TRUE)
 ```
 
-## Example
+## Examples
 
 This is a basic example which shows you how to use the *lex()* and (lex_dutch) functions to calculate 40 scores:
 
@@ -61,7 +61,7 @@ data <- cbind(ID, answer) #combine the two columns above into one data
 #The following line calculates the score for the English and German versions of lextale-test:
 Lextale::lex(data)
 #The following line calculates the score for the lextale Dutch test:
-Lextale::lex_dutch(data$ID, data$answer)
+Lextale::lex_dutch(data)
 ```
 
 ## Cite as
