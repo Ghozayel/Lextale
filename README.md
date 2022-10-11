@@ -54,18 +54,28 @@ devtools::install_github("Ghozayel/Lextale", dependencies = TRUE)
 ```
 
 ## Examples
-
-This is a basic example which shows you how to use the *lex()* and (lex_dutch) functions to calculate 40 scores:
-
+The first 3 lines below below generate fake data for the purpose of testing the functions:
 ``` r
-#The first 3 lines below generate fake data for the purpose of testing the functions:
 answer <- sample(c(0/1), replace = TRUE, 2400) #generate 2400 random binary responses
 ID <- gl(40, 60) #generate  40 ids
-data <- cbind(ID, answer) #combine the two columns above into one data
+data <- cbind(ID, answer, score) #combine the three vectors above into one dataframe
+```
+- lex()
+``` r
 #The following line calculates the score for the English and German versions of lextale-test:
 Lextale::lex(data)
+```
+-  lex_dutch()
+``` r
 #The following line calculates the score for the lextale Dutch test:
 Lextale::lex_dutch(data)
+```
+- cef(data)
+``` r
+#run lex() first before running this function.
+#change the column 'p.correctAV' in the resulted csv.file into 'score'
+#The following line categorises English lextale-scores into 3 CEF levels, provided with *score* vector in the data:
+Lextale::cef(data)
 ```
 
 ## Cite as
