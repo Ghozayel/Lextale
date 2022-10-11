@@ -1,16 +1,15 @@
 #' @title calculate lextale score, Dutch version
 #' @description to mark & calculate score for Dutch lextale-test, provided with answer variable (0/1)
-#' @param ID a numeric value
-#' @param answer a binary values (0/1), at least 60 to returns one score
+#' @param dataframe a binary values (0/1), at least 60 to returns one score
 #' @export
 #' @name lex_dutch
-lex_dutch <- function(ID, answer) {
+lex_dutch <- function(dataframe) {
   #importing the package data
   Data <-
     Lextale::lextale.dutch %>%
     #marking correct/incorrect entries (1=correct and 0=incorrect) in a new column called score
-    dplyr::mutate(score=if_else({{answer}}==correct, 1, 0),
-                  ID = {{ID}})
+    dplyr::mutate(score=if_else(dataframe$answer==correct, 1, 0),
+                  ID = dataframe$ID)
   accuracyByType <- Data %>%
     #calculate number of correct answers per type (word/ non-word) for each participant
     dplyr::group_by(ID,type) %>%

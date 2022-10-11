@@ -4,12 +4,10 @@
 \alias{lex_dutch}
 \title{calculate lextale score, Dutch version}
 \usage{
-lex_dutch(ID, answer)
+lex_dutch(dataframe)
 }
 \arguments{
-\item{ID}{a numeric value}
-
-\item{answer}{a binary values (0/1), at least 60 to returns one score}
+\item{dataframe}{a binary values (0/1), at least 60 to returns one score}
 }
 \description{
 to mark & calculate score for Dutch lextale-test, provided with answer variable (0/1)
