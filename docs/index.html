@@ -87,20 +87,22 @@
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 <!-- badges: start -->
 
-<p>The goal of <a href="https://ghozayel.github.io/Lextale/" class="external-link">Lextale package</a> is to mark and calculates the <a href="https://www.lextale.com/scoring.html" class="external-link">%correctAV scoring</a> for the English, German and Dutch versions <a href="https://www.lextale.com" class="external-link">LexTALE-test</a> if administered using implementations that do not end with participants’ score on the screen, e.g. online surveys. For more info about the test, see <a href="https://www.lextale.com/pdf/Lemhofer_Broersma_2012.pdf" class="external-link">Lemhöfer &amp; Broersma, 2012</a>.</p>
+<p>The main goal of <a href="https://ghozayel.github.io/Lextale/" class="external-link">Lextale package</a> is to mark and calculate the <a href="https://www.lextale.com/scoring.html" class="external-link">%correctAV scoring</a> for the English, German and Dutch <a href="https://www.lextale.com" class="external-link">LexTALE-test</a> if administered using implementations that do not end with participants’ score on the screen, e.g. online surveys. For more info about the test, see <a href="https://www.lextale.com/pdf/Lemhofer_Broersma_2012.pdf" class="external-link">Lemhöfer &amp; Broersma, 2012</a>.</p>
 <div class="section level2">
 <h2 id="functions-and-arguments">Functions and Arguments<a class="anchor" aria-label="anchor" href="#functions-and-arguments"></a>
 </h2>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="reference/lex.html">lex</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="reference/lex.html">lex</a></span><span class="op">(</span><span class="va">dataframe</span><span class="op">)</span></span></code></pre></div>
 <p>This function mark and calculates the lextale score for the English and German versions of the test. Its argument takes a dataframe which must inclue two variables(columns): - ID: each ID must have 60 entries, e.g. ID <em>1987</em> repeated 60 times, with 40 IDs per time (=2400 rows). - answer: a variable of 0/1, with 2400 rows.</p>
-<p><em>Please note both columns names are case-sensitive. Using this function returns the scores of 40 participants in one lex-click! Future work will be on accepting and open number of scores, and on accepting Yes/No in the argument.</em></p>
+<p>Running this function exports/saves a file named ‘lex.scores.csv’ to your directory. <em>Please note both columns names are case-sensitive. Using this function returns the scores of 40 participants in one lex-click! Future work will be on accepting and open number of scores, and on accepting Yes/No in the argument.</em></p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">lex.dutch</span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
-<p>This function mark and calculates the lextale score for the Dutch version of the test. <em>Not yet live, but coming soon!</em></p>
+<code class="sourceCode R"><span><span class="fu">lex.dutch</span><span class="op">(</span><span class="va">dataframe</span><span class="op">)</span> </span></code></pre></div>
+<p>This function mark and calculates the lextale score for the Dutch version of the test. This function takes a dataframe which must inclue two vectors: - ID: each ID must have 60 entries, e.g. ID <em>1987</em> repeated 60 times, with 40 IDs per time (=2400 rows). - answer: a variable of 0/1, with 2400 rows.</p>
+<p>Running this function exports/saves a file named ‘lex_dutch.scores.csv’ to your directory. <em>Please note both columns names are case-sensitive. Using this function returns the scores of 40 participants! Future work will be on accepting and open number of scores, and on accepting Yes/No in the argument.</em></p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">CEF</span><span class="op">(</span><span class="op">)</span> <span class="co">#under progress</span></span></code></pre></div>
-<p>This function categorises the English lexTALE-scores into three CEF levels. The categorisation is based on <a href="https://www.lextale.com/pdf/Lemhofer_Broersma_2012.pdf" class="external-link">Lemhöfer &amp; Broersma, 2012 study</a>. cef() argument takes a dataframe which must inclue <em>score</em> variable(column) of values from 0 to 100. The function creates two new columns, CEF.level &amp; CEF.descr. based on the provided scores</p>
+<code class="sourceCode R"><span><span class="fu">CEF</span><span class="op">(</span><span class="op">)</span> </span></code></pre></div>
+<p>This function categorises the English lexTALE-scores into three CEF levels. The categorisation is based on <a href="https://www.lextale.com/pdf/Lemhofer_Broersma_2012.pdf" class="external-link">Lemhöfer &amp; Broersma, 2012 study</a>. cef() argument takes a vector <em>score</em> (variable/column) of values from 0 to 100. The function creates two new columns, CEF.level &amp; CEF.descr. based on the provided scores.</p>
+<p>Running this function exports/saves a file named ‘score2cef.csv’ to your directory.</p>
 </div>
 <div class="section level2">
 <h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
@@ -111,16 +113,33 @@
 <span><span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"Ghozayel/Lextale"</span>, dependencies <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code></pre></div>
 </div>
 <div class="section level2">
-<h2 id="example">Example<a class="anchor" aria-label="anchor" href="#example"></a>
+<h2 id="examples">Examples<a class="anchor" aria-label="anchor" href="#examples"></a>
 </h2>
-<p>This is a basic example which shows you how to use the <em>lex()</em> function to calculate 10 scores:</p>
+<p>The first 3 lines below generate fake data for the purpose of testing the functions:</p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co">#The first 3 lines below generate fake data for the purpose of testing the lex() function:</span></span>
-<span><span class="va">answer</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/sample.html" class="external-link">sample</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0</span><span class="op">/</span><span class="fl">1</span><span class="op">)</span>, replace <span class="op">=</span> <span class="cn">TRUE</span>, <span class="fl">2400</span><span class="op">)</span> <span class="co">#generate 2400 random binary responses</span></span>
+<code class="sourceCode R"><span><span class="va">answer</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/sample.html" class="external-link">sample</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0</span><span class="op">/</span><span class="fl">1</span><span class="op">)</span>, replace <span class="op">=</span> <span class="cn">TRUE</span>, <span class="fl">2400</span><span class="op">)</span> <span class="co">#generate 2400 random binary responses</span></span>
 <span><span class="va">ID</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/gl.html" class="external-link">gl</a></span><span class="op">(</span><span class="fl">40</span>, <span class="fl">60</span><span class="op">)</span> <span class="co">#generate  40 ids</span></span>
-<span><span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/cbind.html" class="external-link">cbind</a></span><span class="op">(</span><span class="va">ID</span>, <span class="va">answer</span><span class="op">)</span> <span class="co">#combine the two columns above into one data</span></span>
-<span><span class="co">#The following line run the lextale test:</span></span>
+<span><span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/cbind.html" class="external-link">cbind</a></span><span class="op">(</span><span class="va">ID</span>, <span class="va">answer</span>, <span class="va">score</span><span class="op">)</span> <span class="co">#combine the three vectors above into one dataframe</span></span></code></pre></div>
+<ul>
+<li>lex()</li>
+</ul>
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co">#The following line calculates the score for the English and German versions of lextale-test:</span></span>
 <span><span class="fu">Lextale</span><span class="fu">::</span><span class="fu"><a href="reference/lex.html">lex</a></span><span class="op">(</span><span class="va">data</span><span class="op">)</span></span></code></pre></div>
+<ul>
+<li>lex_dutch()</li>
+</ul>
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co">#The following line calculates the score for the lextale Dutch test:</span></span>
+<span><span class="fu">Lextale</span><span class="fu">::</span><span class="fu"><a href="reference/lex_dutch.html">lex_dutch</a></span><span class="op">(</span><span class="va">data</span><span class="op">)</span></span></code></pre></div>
+<ul>
+<li>cef(data)</li>
+</ul>
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co">#run lex() first before running this function.</span></span>
+<span><span class="co">#change the column 'p.correctAV' in the resulted csv.file into 'score'</span></span>
+<span><span class="co">#The following line categorises English lextale-scores into 3 CEF levels, provided with *score* vector in the data:</span></span>
+<span><span class="fu">Lextale</span><span class="fu">::</span><span class="fu"><a href="reference/cef.html">cef</a></span><span class="op">(</span><span class="va">data</span><span class="op">)</span></span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="cite-as">Cite as<a class="anchor" aria-label="anchor" href="#cite-as"></a>
