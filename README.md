@@ -22,7 +22,7 @@ This function mark and calculates the lextale score for the English and German v
 Running this function exports/saves a file named 'lex.scores.csv' to your directory.
 *Please note both columns names are case-sensitive.
 Using this function returns the scores of 40 participants in one lex-click!
-Future work will be on accepting and open number of scores, and on accepting Yes/No in the argument.* 
+Future work will be on accepting open number of scores, and Yes/No in the argument.* 
 
 ``` r
 lex.dutch(dataframe) 
