@@ -15,26 +15,26 @@ The main goal of [Lextale package](https://ghozayel.github.io/Lextale/) is to ma
 ``` r
 lex(dataframe)
 ```
-This function mark and calculates the lextale score for the English and German versions of the test. Its argument takes a dataframe which must inclue two variables(columns):
+This function marks and calculates the lextale score for the English and German versions of the test. The argument takes a dataframe which must include two variables(columns):
 - ID: each ID must have 60 entries, e.g. ID *1987* repeated 60 times, with 40 IDs per time (=2400 rows).
 - answer: a variable of 0/1, with 2400 rows. 
 
 Running this function exports/saves a file named 'lex.scores.csv' to your directory.
 *Please note both columns names are case-sensitive.
 Using this function returns the scores of 40 participants in one lex-click!
-Future work will be on accepting and open number of scores, and on accepting Yes/No in the argument.* 
+Future work will be on accepting open number of scores, and Yes/No in the argument.* 
 
 ``` r
 lex.dutch(dataframe) 
 ```
-This function mark and calculates the lextale score for the Dutch version of the test. This function takes a dataframe which must inclue two vectors:
+This function marks and calculates the lextale score for the Dutch version of the test. The function lex.dutch() takes a dataframe in its argument that must include two vectors:
 - ID: each ID must have 60 entries, e.g. ID *1987* repeated 60 times, with 40 IDs per time (=2400 rows).
 - answer: a variable of 0/1, with 2400 rows. 
 
 Running this function exports/saves a file named 'lex_dutch.scores.csv' to your directory.
 *Please note both columns names are case-sensitive.
 Using this function returns the scores of 40 participants!
-Future work will be on accepting and open number of scores, and on accepting Yes/No in the argument.* 
+Future work will be on accepting open number of scores, and Yes/No in the argument.* 
 
 ``` r
 CEF() 
