@@ -4,10 +4,11 @@
 #' @export
 #' @name lex
 lex <- function(answerVar) {
-#  stopifnot("Input must be numeric" = is.numeric(answerVar))
+  if(!is.numeric(answerVar$answer)){ anwerVar$answer = ifelse(tolower(answerVar$answer) %in% c("yes", "y"), 1, 0)}
+  stopifnot(all(answerVar$answer %in% c(1,0)))
 #  if (length(answerVar)<60){
 #    warning("Please make sure that you provided at least 60 responses/data-ponits/rows.")
-#    }
+}
   #importing the package data
   Data <-
     Lextale::lextaledata %>%
