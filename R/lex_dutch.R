@@ -4,6 +4,9 @@
 #' @export
 #' @name lex_dutch
 lex_dutch <- function(dataframe) {
+  if(!is.numeric(answerVar$answer)){ anwerVar$answer = ifelse(tolower(answerVar$answer) %in% c("yes", "y"), 1, 0)}
+  stopifnot(all(answerVar$answer %in% c(1,0)))
+}
   #importing the package data
   Data <-
     Lextale::lextale.dutch %>%
