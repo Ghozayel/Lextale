@@ -1,0 +1,16 @@
+- name: pkgcheck
+  # You may pin to the exact commit or the version.
+  # uses: ropensci-review-tools/pkgcheck-action@77f0af25ae0abe89213b3749c663d6dd9f3a73fd
+  uses: ropensci-review-tools/pkgcheck-action@v1.0.0
+  with:
+    # The ref to checkout and check. Set to empty string to skip checkout.
+    ref: # default is ${{ github.ref }}
+    # Should the pkgcheck results be posted as an issue?
+    post-to-issue: # default is ${{ github.event_name != 'pull_request' }}
+    # Name for the issue containing the pkgcheck results. Will be created or updated.
+    issue-title: # default is pkgcheck results - ${{ github.ref_name }}
+    # Only post the check summary to issue. Set to false to get the full results in the issue.
+    summary-only: # default is true
+    # Should issue results be appended to existing issue, or posted in new issues.
+    append-to-issue: # default is true
+pkgcheck::use_github_action_pkgcheck()
